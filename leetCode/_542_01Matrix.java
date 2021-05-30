@@ -1,6 +1,46 @@
 import java.util.ArrayDeque;
 import java.util.Queue;
 
+/*
+ * Given an m x n binary matrix mat, return the distance of the nearest 0 for each cell.
+
+The distance between two adjacent cells is 1.
+
+ 
+
+Example 1:
+
+Input: mat = [[0,0,0],[0,1,0],[0,0,0]]
+Output: [[0,0,0],[0,1,0],[0,0,0]]
+
+Example 2:
+
+Input: mat = [[0,0,0],[0,1,0],[1,1,1]]
+Output: [[0,0,0],[0,1,0],[1,2,1]]
+
+ 
+
+Constraints:
+
+    m == mat.length
+    n == mat[i].length
+    1 <= m, n <= 104
+    1 <= m * n <= 104
+    mat[i][j] is either 0 or 1.
+    There is at least one 0 in mat.
+
+
+ */
+/*
+ * BFS 
+
+1. first create a distance matrix
+2. assign max int value to all distance
+3. the matrix node that has 0 , change its dist as 0 and keep pushing in queue
+4. pop element one by one > check its neighbour that are not visited which have max_int distance
+5. change its dist as dist of current node +1
+6. push this node to queue to check its neighbours
+ */
 public class _542_01Matrix {
 	public class Loc {
 		int x;
