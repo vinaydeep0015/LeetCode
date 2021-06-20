@@ -27,7 +27,6 @@ public class CompareHashMapByValue {
 		map.put(3, s4);
 		map.put(4, s5);
 		map.put(5, s6);
-
 		
 		//Sort By Value using Object
 		List<Strength> list = new ArrayList<>(map.values());
@@ -38,6 +37,8 @@ public class CompareHashMapByValue {
 		//Get index of an object
 		int requiredVal = 70;
 		Set<Entry<Integer,Strength>> entrySet = new HashSet<>(map.entrySet());
+		
+		//MyClass mobj = MyClass.class.cast(obj);
 		
 		for(Entry e: entrySet) {
 			if(Strength.class.cast(e.getValue()).getVal()==requiredVal) {
